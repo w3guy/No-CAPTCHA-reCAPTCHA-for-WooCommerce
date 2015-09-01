@@ -12,7 +12,7 @@ Protect WooCommerce login and registration form against spam using Google's No C
 
 == Description ==
 
-A simple plugin for adding the new No CAPTCHA reCAPTCHA to WooCommerce login and registration form to protect against spam.
+A simple plugin for adding the new No CAPTCHA reCAPTCHA to WooCommerce login, registration and password reset form to protect against spam.
 
 ### Features
 *   Option to activate CAPTCHA in either login or registration form.
