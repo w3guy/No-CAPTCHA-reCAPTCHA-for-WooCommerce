@@ -1,7 +1,7 @@
 === Plugin Name ===
 Contributors: collizo4sky
 Donate link: https://flattr.com/submit/auto?user_id=tech4sky&url=http%3A%2F%2Fw3guy.com
-Tags: woocommerce, login, registration, comments, spam, login, registration, captcha, recaptcha, spammers, bot, security, bot, bots
+Tags: woocommerce, form, security, login, registration, comments, spam, login, registration, captcha, recaptcha, spammers, bot, security, bot, bots
 Requires at least: 3.4
 Tested up to: 4.3
 Stable tag: 1.1
@@ -15,7 +15,7 @@ Protect WooCommerce login, registration and password reset form against spam usi
 A simple plugin for adding the new No CAPTCHA reCAPTCHA to WooCommerce login, registration and password reset form to protect against spam.
 
 ### Features
-*   Option to activate CAPTCHA in either login or registration form.
+*   Option to activate CAPTCHA in WooCommerce login, registration and password reset form page.
 *   Choose a theme for the CAPTCHA.
 *   Auto-detects the user's language
 
