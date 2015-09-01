@@ -8,7 +8,7 @@ Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Protect WooCommerce login and registration form against spam using Google's No CAPTCHA reCAPTCHA.
+Protect WooCommerce login, registration and password reset form against spam using Google's No CAPTCHA reCAPTCHA.
 
 == Description ==
 
