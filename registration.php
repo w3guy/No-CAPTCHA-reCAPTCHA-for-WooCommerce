@@ -6,7 +6,7 @@ class WC_Ncr_Registration_Captcha extends WC_Ncr_No_Captcha_Recaptcha {
 	public static function initialize() {
 
 		// initialize if login is activated
-		if ( isset( self::$plugin_options['captcha_wc_registration'] ) || self::$plugin_options['captcha_wc_registration'] == 'yes' ) {
+		if ( isset( self::$plugin_options['captcha_wc_registration'] ) && self::$plugin_options['captcha_wc_registration'] == 'yes' ) {
 			// adds the captcha to the registration form
 			add_action( 'register_form', array( __CLASS__, 'display_captcha' ) );
 

@@ -8,7 +8,7 @@ class WC_Ncr_Lost_Password_Captcha extends WC_Ncr_No_Captcha_Recaptcha {
 	public static function initialize() {
 
 		// initialize if login is activated
-		if ( isset( self::$plugin_options['captcha_wc_lost_password'] ) || self::$plugin_options['captcha_wc_lost_password'] == 'yes' ) {
+		if ( isset( self::$plugin_options['captcha_wc_lost_password'] ) && self::$plugin_options['captcha_wc_lost_password'] == 'yes' ) {
 
 			// adds the captcha to the login form
 			add_filter( 'woocommerce_lostpassword_form', array( __CLASS__, 'display_captcha' ) );
