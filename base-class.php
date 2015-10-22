@@ -50,12 +50,10 @@ class WC_Ncr_No_Captcha_Recaptcha {
 
 		$lang_option = self::$plugin_options['language'];
 
-		// if language is empty (auto detected chosen) do nothing otherwise add the lang query to the
-		// reCAPTCHA script url
+		// if language is empty (auto detected chosen) do nothing otherwise add the lang query to the reCAPTCHA script url
+		$lang = "";
 		if ( isset( $lang_option ) && ( ! empty( $lang_option ) ) ) {
 			$lang = "?hl=$lang_option";
-		} else {
-			$lang = null;
 		}
 
 		echo '<script src="https://www.google.com/recaptcha/api.js' . $lang . '" async defer></script>' . "\r\n";
@@ -66,6 +64,31 @@ class WC_Ncr_No_Captcha_Recaptcha {
 	public static function display_captcha() {
 
 		echo '<div class="g-recaptcha" data-sitekey="' . self::$site_key . '" data-theme="' . self::$theme . '"></div>';
+
+		// Support for users that don't have JavaScript enabled
+		// https://developers.google.com/recaptcha/docs/faq
+		echo '
+		<noscript>
+		  <div style="width: 302px; height: 422px;">
+		    <div style="width: 302px; height: 422px; position: relative;">
+		      <div style="width: 302px; height: 422px; position: absolute;">
+		        <iframe src="https://www.google.com/recaptcha/api/fallback?k=' . self::$site_key . '"
+		                frameborder="0" scrolling="no"
+		                style="width: 302px; height:422px; border-style: none;">
+		        </iframe>
+		      </div>
+		      <div style="width: 300px; height: 60px; border-style: none;
+		                  bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+		                  background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+		        <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+		                  class="g-recaptcha-response"
+		                  style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+		                         margin: 10px 25px; padding: 0px; resize: none;" >
+		        </textarea>
+		      </div>
+		    </div>
+		  </div>
+		</noscript>';
 	}
 
 	/**
@@ -74,8 +97,11 @@ class WC_Ncr_No_Captcha_Recaptcha {
 	 * @return bool
 	 */
 	public static function captcha_wc_verification() {
+		if ( ! isset( $_POST['g-recaptcha-response'] ) ) {
+			return false;	
+		}
 
-		$response = isset( $_POST['g-recaptcha-response'] ) ? esc_attr( $_POST['g-recaptcha-response'] ) : '';
+		$response = esc_attr( $_POST['g-recaptcha-response'] );
 
 		$remote_ip = $_SERVER["REMOTE_ADDR"];
 
@@ -104,7 +130,7 @@ class WC_Ncr_No_Captcha_Recaptcha {
 			'captcha_wc_registration' => 'yes',
 			'captcha_wc_comment'      => 'yes',
 			'theme'                => 'light',
-			'error_message'        => __('<strong>ERROR</strong>: Please retry CAPTCHA', 'wc-no-captcha')
+			'error_message'        => __('<strong>ERROR</strong>: Please fill in the reCAPTCHA form.', 'wc-no-captcha')
 		);
 
 		add_option( 'wc_ncr_options', $default_options );

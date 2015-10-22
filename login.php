@@ -5,7 +5,7 @@ class WC_Ncr_Login_Captcha extends WC_Ncr_No_Captcha_Recaptcha {
 	public static function initialize() {
 
 		// initialize if login is activated
-		if ( isset( self::$plugin_options['captcha_wc_login'] ) || self::$plugin_options['captcha_wc_login'] == 'yes' ) {
+		if ( isset( self::$plugin_options['captcha_wc_login'] ) && self::$plugin_options['captcha_wc_login'] == 'yes' ) {
 
 			// adds the captcha to the login form
 			add_filter( 'woocommerce_login_form', array( __CLASS__, 'display_captcha' ) );
@@ -25,7 +25,7 @@ class WC_Ncr_Login_Captcha extends WC_Ncr_No_Captcha_Recaptcha {
 	 */
 	public static function validate_login_captcha( $user, $password ) {
 
-		if ( ! isset( $_POST['g-recaptcha-response'] ) || ! self::captcha_wc_verification() ) {
+		if ( ! self::captcha_wc_verification() ) {
 			return new WP_Error( 'empty_captcha', self::$error_message );
 		}
 
