@@ -13,8 +13,8 @@ class WC_Ncr_Registration_Captcha extends WC_Ncr_No_Captcha_Recaptcha {
 			add_action( 'woocommerce_after_checkout_registration_form', array( __CLASS__, 'display_captcha' ) );
 
 			// authenticate the captcha answer
-			add_filter( 'registration_errors', array( __CLASS__, 'validate_captcha_wc_registration' ) );
-			add_filter( 'woocommerce_registration_errors', array( __CLASS__, 'validate_captcha_wc_registration' ) );
+			add_filter( 'registration_errors', array( __CLASS__, 'validate_captcha_wc_registration' ), 10, 3 );
+			add_filter( 'woocommerce_registration_errors', array( __CLASS__, 'validate_captcha_wc_registration' ), 10, 3 );
 		}
 	}
 
