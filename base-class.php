@@ -97,8 +97,11 @@ class WC_Ncr_No_Captcha_Recaptcha {
 	 * @return bool
 	 */
 	public static function captcha_wc_verification() {
+		if ( ! isset( $_POST['g-recaptcha-response'] ) ) {
+			return false;	
+		}
 
-		$response = isset( $_POST['g-recaptcha-response'] ) ? esc_attr( $_POST['g-recaptcha-response'] ) : '';
+		$response = esc_attr( $_POST['g-recaptcha-response'] );
 
 		$remote_ip = $_SERVER["REMOTE_ADDR"];
 
