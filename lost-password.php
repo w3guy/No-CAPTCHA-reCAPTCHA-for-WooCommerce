@@ -14,7 +14,7 @@ class WC_Ncr_Lost_Password_Captcha extends WC_Ncr_No_Captcha_Recaptcha {
 			add_action( 'woocommerce_lostpassword_form', array( __CLASS__, 'display_captcha' ) );
 			
 			// authenticate the captcha answer
-			add_filter( 'allow_password_reset', array( __CLASS__, 'validate_lost_password_captcha' ) );
+			add_filter( 'allow_password_reset', array( __CLASS__, 'validate_lost_password_captcha' ), 10, 2 );
 		}
 	}
 
@@ -24,10 +24,10 @@ class WC_Ncr_Lost_Password_Captcha extends WC_Ncr_No_Captcha_Recaptcha {
 	 * @return WP_Error or boolean
 	 */
 	public static function validate_lost_password_captcha( $result, $user_id ) {
-		if ( ! isset( $_POST['g-recaptcha-response'] ) || ! self::captcha_wc_verification() ) {
- 		 	$result = new WP_Error( 'empty_captcha', self::$error_message );	 	
+		if ( ! self::captcha_wc_verification() ) {
+ 		  	$result = new WP_Error( 'empty_captcha', self::$error_message );	 	
 		}
-		
+		 
 		return $result;
 	}
 }
