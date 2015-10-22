@@ -50,12 +50,10 @@ class WC_Ncr_No_Captcha_Recaptcha {
 
 		$lang_option = self::$plugin_options['language'];
 
-		// if language is empty (auto detected chosen) do nothing otherwise add the lang query to the
-		// reCAPTCHA script url
+		// if language is empty (auto detected chosen) do nothing otherwise add the lang query to the reCAPTCHA script url
+		$lang = "";
 		if ( isset( $lang_option ) && ( ! empty( $lang_option ) ) ) {
 			$lang = "?hl=$lang_option";
-		} else {
-			$lang = null;
 		}
 
 		echo '<script src="https://www.google.com/recaptcha/api.js' . $lang . '" async defer></script>' . "\r\n";
