@@ -24,7 +24,7 @@ class WC_Ncr_Login_Captcha extends WC_Ncr_No_Captcha_Recaptcha {
 	 * @return WP_Error|WP_user
 	 */
 	public static function validate_login_captcha( $user, $password ) {
-
+		remove_action( 'wp_authenticate_user', array( 'Ncr_Login_Captcha', 'validate_captcha' ), 10 );
 		if ( ! isset( $_POST['g-recaptcha-response'] ) || ! self::captcha_wc_verification() ) {
 			return new WP_Error( 'empty_captcha', self::$error_message );
 		}

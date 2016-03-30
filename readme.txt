@@ -1,9 +1,9 @@
 === Plugin Name ===
-Contributors: collizo4sky
+Contributors: Collizo4sky
 Donate link: https://flattr.com/submit/auto?user_id=tech4sky&url=http%3A%2F%2Fw3guy.com
 Tags: woocommerce, form, security, login, registration, comments, spam, login, registration, captcha, recaptcha, spammers, bot, security, bot, bots
-Requires at least: 3.4
-Tested up to: 4.3
+Requires at least: 4.0
+Tested up to: 4.4.2
 Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -23,8 +23,11 @@ A simple plugin for adding the new No CAPTCHA reCAPTCHA to WooCommerce login, re
 As a result, if you activate the CAPTCHA in both login and registration form, in WooCommerce checkout and My Account page, the CAPTCHA will appear only
 in the login form.
 
-### See Also
+### Plugins you will like
 * **[ProfilePress](https://wordpress.org/plugins/ppress/)**: A shortcode based WordPress form builder that makes building custom login, registration and password reset forms stupidly simple. [More info here](http://profilepress.net)
+* **[OmniPay](https://omnipay.io)**: OmniPay is a payment gateway extension for WooCommerce and Easy Digital Downloads that bundles several payment providers such as Stripe, 2checkout, PayPal, Braintree, WePay, Authorize.Net together thus saving you money.
+You get over seven(7) payment extensions for the price of one saving you over 90% of cost.
+* **[Better WePay Payment Gateway for WooCommerce](https://omnipay.io/downloads/better-wepay-payment-gateway-for-woocommerce/)**: allows your WooCommerce powered store to accept credit card and bank account payment from shoppers via WePay.
 
 
 == Installation ==
