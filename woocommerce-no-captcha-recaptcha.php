@@ -4,7 +4,7 @@
 Plugin Name: No CAPTCHA reCAPTCHA for WooCommerce
 Plugin URI: http://w3guy.com
 Description: Add the No CAPTCHA reCAPTCHA to WooCommerce login and registration form
-Version: 1.1.2
+Version: 1.2
 Author: Agbonghama Collins
 Author URI: http://w3guy.com
 License: GPL2
