@@ -1,6 +1,6 @@
 === No CAPTCHA reCAPTCHA for WooCommerce ===
 Contributors: Collizo4sky
-Donate link: https://flattr.com/submit/auto?user_id=tech4sky&url=http%3A%2F%2Fw3guy.com
+Donate link: https://w3guy.com/about/
 Tags: woocommerce, form, security, login, registration, comments, spam, login, registration, captcha, recaptcha, spammers, bot, security, bot, bots
 Requires at least: 4.0
 Tested up to: 4.8.1
@@ -24,10 +24,8 @@ As a result, if you activate the CAPTCHA in both login and registration form, in
 in the login form.
 
 ### Plugins you will like
-* **[ProfilePress](https://wordpress.org/plugins/ppress/)**: A shortcode based WordPress form builder that makes building custom login, registration and password reset forms stupidly simple. [More info here](http://profilepress.net)
-* **[OmniPay](https://omnipay.io)**: OmniPay is a payment gateway extension for WooCommerce and Easy Digital Downloads that bundles several payment providers such as Stripe, 2checkout, PayPal, Braintree, WePay, Authorize.Net together thus saving you money.
-You get over seven(7) payment extensions for the price of one saving you over 90% of cost.
-* **[Better WePay Payment Gateway for WooCommerce](https://omnipay.io/downloads/better-wepay-payment-gateway-for-woocommerce/)**: allows your WooCommerce powered store to accept credit card and bank account payment from shoppers via WePay.
+* **[ProfilePress](https://wordpress.org/plugins/ppress/)**: A shortcode based WordPress form builder that makes building custom login, registration and password reset forms stupidly simple. [More info here](https://profilepress.net)
+* **[MailOptin](https://mailoptin.io/)** - The best WordPress email optin forms, email automation & newsletters plugin in the market.
 
 
 == Installation ==
@@ -62,7 +60,8 @@ Any question? post it in the support forum.
 
 = 1.2.1 =
 * Changed default error message to "Please confirm you are not a robot"
-* 
+* Fix undefined index PHP notices
+* Remove recaptcha check on checkout page
 
 = 1.2 =
 * Fix compatibility with "No CAPTCHA reCAPTCHA plugin" (https://wordpress.org/plugins/no-captcha-recaptcha/)
