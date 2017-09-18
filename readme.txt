@@ -3,8 +3,8 @@ Contributors: Collizo4sky
 Donate link: https://flattr.com/submit/auto?user_id=tech4sky&url=http%3A%2F%2Fw3guy.com
 Tags: woocommerce, form, security, login, registration, comments, spam, login, registration, captcha, recaptcha, spammers, bot, security, bot, bots
 Requires at least: 4.0
-Tested up to: 4.4.2
-Stable tag: 1.2
+Tested up to: 4.8.1
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -59,6 +59,10 @@ Any question? post it in the support forum.
 5. CAPTCHA in WooCommerce login form
 
 == Changelog ==
+
+= 1.2.1 =
+* Changed default error message to "Please confirm you are not a robot"
+* 
 
 = 1.2 =
 * Fix compatibility with "No CAPTCHA reCAPTCHA plugin" (https://wordpress.org/plugins/no-captcha-recaptcha/)

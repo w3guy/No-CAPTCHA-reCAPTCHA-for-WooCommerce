@@ -36,8 +36,7 @@ class WC_Ncr_No_Captcha_Recaptcha {
 
 		// initialize if login is activated
 		if ( ( isset( self::$plugin_options['captcha_wc_registration'] ) && self::$plugin_options['captcha_wc_registration'] == 'yes' ) || ( isset( self::$plugin_options['captcha_wc_login'] ) && self::$plugin_options['captcha_wc_login'] == 'yes' ) || ( isset( self::$plugin_options['captcha_wc_password_reset'] ) && self::$plugin_options['captcha_wc_password_reset'] == 'yes' ) ) {
-
-			add_action( 'wp_head', array( __CLASS__, 'header_script' ) );
+            add_action( 'wp_head', array( __CLASS__, 'header_script' ) );
 		}
 	}
 
@@ -104,7 +103,7 @@ class WC_Ncr_No_Captcha_Recaptcha {
 			'captcha_wc_registration' => 'yes',
 			'captcha_wc_comment'      => 'yes',
 			'theme'                => 'light',
-			'error_message'        => __('<strong>ERROR</strong>: Please retry CAPTCHA', 'wc-no-captcha')
+			'error_message'        => __('<strong>ERROR</strong>: Please confirm you are not a robot', 'wc-no-captcha')
 		);
 
 		add_option( 'wc_ncr_options', $default_options );

@@ -2,22 +2,22 @@
 
 /*
 Plugin Name: No CAPTCHA reCAPTCHA for WooCommerce
-Plugin URI: http://w3guy.com
+Plugin URI: https://mailoptin.io
 Description: Add the No CAPTCHA reCAPTCHA to WooCommerce login and registration form
-Version: 1.2
-Author: Agbonghama Collins
-Author URI: http://w3guy.com
+Version: 1.2.1
+Author: MailOptin Team
+Author URI: https://mailoptin.io
 License: GPL2
 Text Domain: wc-no-captcha
 Domain Path: /lang/
 */
 
 
-require_once 'base-class.php';
-require_once 'registration.php';
-require_once 'login.php';
-require_once 'lost-password.php';
-require_once 'settings.php';
+require_once dirname(__FILE__) . '/base-class.php';
+require_once dirname(__FILE__) . '/registration.php';
+require_once dirname(__FILE__) . '/login.php';
+require_once dirname(__FILE__) . '/lost-password.php';
+require_once dirname(__FILE__) . '/settings.php';
 
 
 WC_Ncr_No_Captcha_Recaptcha::initialize();
