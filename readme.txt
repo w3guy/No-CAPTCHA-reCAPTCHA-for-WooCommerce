@@ -1,10 +1,10 @@
 === No CAPTCHA reCAPTCHA for WooCommerce ===
 Contributors: Collizo4sky
 Donate link: https://w3guy.com/about/
-Tags: woocommerce, form, security, login, registration, comments, spam, login, registration, captcha, recaptcha, spammers, bot, security, bot, bots
+Tags: woocommerce, captcha, recaptcha, form, security, login, registration, comments, spam, spammers, bots, anti-spam, anti spam
 Requires at least: 4.0
-Tested up to: 4.8.1
-Stable tag: 1.2.1
+Tested up to: 4.9.8
+Stable tag: 1.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -57,6 +57,10 @@ Any question? post it in the support forum.
 5. CAPTCHA in WooCommerce login form
 
 == Changelog ==
+
+= 1.2.2 =
+* Fixed bug where recaptcha on lost password page was broken.
+* Fixed bug where this plugin was causing wp core lost password from working.
 
 = 1.2.1 =
 * Changed default error message to "Please confirm you are not a robot"
