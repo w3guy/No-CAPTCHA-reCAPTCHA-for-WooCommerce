@@ -18,6 +18,7 @@ require_once dirname(__FILE__) . '/registration.php';
 require_once dirname(__FILE__) . '/login.php';
 require_once dirname(__FILE__) . '/lost-password.php';
 require_once dirname(__FILE__) . '/settings.php';
+require_once dirname(__FILE__) . '/mo-admin-notice.php';
 
 
 WC_Ncr_No_Captcha_Recaptcha::initialize();
