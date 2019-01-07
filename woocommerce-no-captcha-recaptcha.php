@@ -4,7 +4,7 @@
 Plugin Name: No CAPTCHA reCAPTCHA for WooCommerce
 Plugin URI: https://mailoptin.io
 Description: Add the No CAPTCHA reCAPTCHA to WooCommerce login and registration form
-Version: 1.2.5
+Version: 1.2.6
 Author: MailOptin Team
 Author URI: https://mailoptin.io
 License: GPL2

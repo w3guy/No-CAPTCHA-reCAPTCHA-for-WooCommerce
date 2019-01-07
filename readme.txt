@@ -3,8 +3,8 @@ Contributors: Collizo4sky
 Donate link: https://w3guy.com/about/
 Tags: woocommerce, captcha, recaptcha, form, security, login, registration, comments, spam, spammers, bots, anti-spam, anti spam
 Requires at least: 4.0
-Tested up to: 5.0
-Stable tag: 1.2.5
+Tested up to: 5.0.2
+Stable tag: 1.2.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -57,6 +57,9 @@ Any question? post it in the support forum.
 5. CAPTCHA in WooCommerce login form
 
 == Changelog ==
+
+= 1.2.6 =
+* Tuned down admin notices.
 
 = 1.2.5 =
 * Improve compatibility with WordPress 5.0
