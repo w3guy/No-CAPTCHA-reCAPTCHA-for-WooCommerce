@@ -24,7 +24,7 @@ As a result, if you activate the CAPTCHA in both login and registration form, in
 in the login form.
 
 ### Plugins you will like
-* **[ProfilePress](https://wordpress.org/plugins/ppress/)**: A shortcode based WordPress form builder that makes building custom login, registration and password reset forms stupidly simple. [More info here](https://profilepress.net)
+* **[ProfilePress](https://wordpress.org/plugins/ppress/)**: A shortcode based WordPress form builder that makes building custom login, registration and password reset forms stupidly simple. [More info here](https://profilepress.com)
 * **[MailOptin](https://mailoptin.io/)** - The best WordPress email optin forms, email automation & newsletters plugin in the market.
 
 
